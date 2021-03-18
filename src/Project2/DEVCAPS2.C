@@ -123,7 +123,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
                 dwNeeded, &dwNeeded, &dwReturned);
             for (i = 0; i < dwReturned; i++)
             {
-                AppendMenu(hMenu, (i + 1) % 16 ? 0 : MF_MENUBARBREAK, i + 1,
+                AppendMenu(hMenu, MF_STRING, i + 1,
                     pinfo4[i].pPrinterName);
             }
             free(pinfo4);
