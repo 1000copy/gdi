@@ -100,7 +100,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         // Next, allocate space for the info array and fill it
         // 
         // Put the printer names on the menu
-        if (GetVersion() & 0x80000000)         // Windows 98
+        //if (GetVersion() & 0x80000000)         // Windows 98
+        if (-1)         // Windows 98
         {
             EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 5, NULL,
                 0, &dwNeeded, &dwReturned);
